@@ -38,7 +38,8 @@ public final class AppUtils {
         rawFileRoot = Paths.get(rootFolderPath.toString(), Constants.RAW_FOLDER);
         textFileRoot = Paths.get(rootFolderPath.toString(), Constants.TEXT_FOLDER);
 
-        String regexString = MessageFormat.format("\\b{0}\\b", keyword);
+        String regexString = MessageFormat.format(
+                "\\b{0}\\b", keyword.toLowerCase());
         pattern = Pattern.compile(regexString);
     }
 
